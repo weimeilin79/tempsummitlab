@@ -39,7 +39,7 @@
   
   	<camelContext xmlns="http://camel.apache.org/schema/spring">
   <route id="input">
-    <from uri="activemq:queue:WEIGHTWATCHER"/>
+    <from uri="amq:queue:WEIGHTWATCHER"/>
     <convertBodyTo type="java.lang.String"/>
     <log message="The message from QUEUE ${body}"/>
     <setHeader headerName="CamelHttpMethod">
